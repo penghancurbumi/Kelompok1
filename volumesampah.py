@@ -79,3 +79,15 @@ ax.grid(True)
 ax.legend()
 
 st.pyplot(fig)
+
+# Tambahkan Diagram Batang
+st.subheader("📊 Total Sampah Tahunan (Diagram Batang)")
+
+fig_bar, ax_bar = plt.subplots(figsize=(12, 6))
+ax_bar.bar(data_tahun['Tahun'], data_tahun['Total_Sampah'], color='green')
+ax_bar.set_xlabel('Tahun')
+ax_bar.set_ylabel('Total Sampah (ton)')
+ax_bar.set_title('Total Sampah Kota Sukabumi per Tahun')
+ax_bar.grid(True)
+
+st.pyplot(fig_bar)
